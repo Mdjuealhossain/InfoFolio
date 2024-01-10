@@ -21,9 +21,9 @@ export default {
     contrastText: "#fff",
   },
   warning: {
-    dark: "#e65100",
-    main: "#ed6c02",
-    light: "#ff9800",
+    dark: "rgba(208, 159, 13, 0.2509803922)",
+    main: "#D09F0D",
+    light: "rgba(255, 248, 225, 0.4784313725)",
     contrastText: "#fff",
   },
   info: {
