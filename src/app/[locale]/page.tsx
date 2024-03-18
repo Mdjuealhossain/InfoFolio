@@ -6,11 +6,13 @@ import CompleteCounterApp from "src/widgets/CompleteCounterApp";
 import Payload from "src/widgets/Payload";
 import MultipleReducer from "src/widgets/MultipleReducer";
 import Midleware from "src/widgets/Midleware";
+import DataFetchReduxThunk from "src/widgets/DataFetchReduxThunk";
+import Counter from "src/components/Counter";
 
 const App = () => {
   return (
-    <Box>
-      <Midleware />
+    <Box justifyContent="center" alignItems="center" display="flex" mt={4}>
+      <Counter />
     </Box>
   );
 };

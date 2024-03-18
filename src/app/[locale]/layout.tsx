@@ -2,7 +2,7 @@ import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import ThemeContextProvider from "src/theme";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-import PortfulioLayout from "src/layouts/PortfulioLayout";
+import StoreProvider from "./lib/StoreProvider";
 
 export const metadata = {
   title: "Redux",
@@ -30,7 +30,8 @@ export default function RootLayout({
       <ThemeContextProvider>
         <body suppressHydrationWarning={true}>
           {/* <PortfulioLayout> */}
-          {children}
+          <StoreProvider>{children}</StoreProvider>
+
           {/* </PortfulioLayout> */}
         </body>
       </ThemeContextProvider>

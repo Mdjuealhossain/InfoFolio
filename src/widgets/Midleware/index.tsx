@@ -1,5 +1,8 @@
 import React from "react";
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
+import logger from "redux-logger";
+
+// Midleware Redux-logger
 
 const Midleware = () => {
   // product Reducer
@@ -43,13 +46,13 @@ const Midleware = () => {
     }
   };
 
-  const store = createStore(productReducer);
+  const store = createStore(productReducer, applyMiddleware(logger));
 
   store.subscribe(() => {
     console.log(store.getState());
   });
 
-  store.dispatch(getProducts());
+  // store.dispatch(getProducts());
   store.dispatch(addProducts("mobile"));
 
   return <div>Midleware</div>;
